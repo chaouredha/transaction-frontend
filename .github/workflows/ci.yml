@@ -44,6 +44,6 @@ jobs:
         run:
           git config --global user.name "gh-actions"
           git config --global user.email "actions@gihub.com"
-          git remote set-url origin https://${github_token}@github.com/${repository}
+          git remote set-url origin https://${env.github_token}@github.com/${env.repository}
           npm run deploy
 
