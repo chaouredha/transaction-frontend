@@ -38,12 +38,13 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        env:
-          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-          repository: ${{ github.repository }}
         run:
           git config --global user.name "gh-actions"
           git config --global user.email "actions@gihub.com"
-          git remote set-url origin https://${env.github_token}@github.com/${env.repository}
+          git remote set-url origin https://${github_token}@github.com/${repository}
           npm run deploy
-
+        env:
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          github_token: ${{secrets.ACTIONS_DEPLOY_ACCESS_TOKEN}}
+          repository: ${{github.repository}}
