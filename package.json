@@ -1,5 +1,6 @@
 {
   "name": "gestion-contact-frontend",
+  "homepage": "https://chaouredha.github.io/gestion-contact-frontend",
   "version": "1.0.0-SNAPSHOT",
   "description": "Gestion contact",
   "private": true,
@@ -48,13 +49,13 @@
   "bugs": {
     "url": "https://github.com/chaouredha/gestion-contact-frontend/issues"
   },
-  "homepage": "https://github.com/chaouredha/gestion-contact-frontend/blob/main/README.md",
   "dependencies": {
     "@tippyjs/react": "4.2.1",
     "axios": "0.21.1",
     "classnames": "2.2.6",
     "core-js": "3.9.0",
     "date-fns": "2.17.0",
+    "gh-pages": "^3.1.0",
     "prop-types": "15.7.2",
     "react": "17.0.1",
     "react-day-picker": "7.4.8",
@@ -74,7 +75,9 @@
     "test-coverage": "jest --coverage",
     "test-all": "jest",
     "lint": "eslint \"**/*.js\"",
-    "ncuu": "ncu -u"
+    "ncuu": "ncu -u",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "transform": {
