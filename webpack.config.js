@@ -82,7 +82,7 @@ module.exports = (env, argv = {}) => ({
     open: false,
     port: 3000,
     /*proxy: {
-      '/gestion-contact-api/': {
+      '/transaction-api/': {
         target: 'http://localhost:9080/',
       },
     },*/

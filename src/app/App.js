@@ -12,7 +12,7 @@ const AppContainer = styled.div`
 `
 const App = () => (
   <AppContainer>
-    <h1>Gestion contrat</h1>
+    <h1>Transaction frontend</h1>
   </AppContainer>
 )
 
